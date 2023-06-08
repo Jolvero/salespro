@@ -27,6 +27,8 @@ Route::get('/clientes/mes', 'ClienteController@obtenerClientesMes');
 Route::get('/prospectos/mes', 'ProspectoController@obtenerProspectosMes');
 Route::get('/prospectos/nombres', 'ProspectoController@prospectosLabels');
 Route::get('/clientes/nombres', 'ClienteController@clientesLabels');
+Route::get('/prospectos/usuarios', 'DashboardController@prospectosUsuario')->name('prospectos.usuario');
+Route::get('/prospectadores', 'DashboardController@contar');
 
 // mailing
 

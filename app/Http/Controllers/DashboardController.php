@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Cliente;
-use App\Events\NuevoProspecto;
+use App\Prospecto;
 use App\Recordatorio;
 use App\Events\UserRegister;
 use Illuminate\Http\Request;
-use function PHPSTORM_META\type;
 
+use App\Events\NuevoProspecto;
+use function PHPSTORM_META\type;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\NotificationRecordatorios;
-use App\User;
 
 class DashboardController extends Controller
 {
@@ -25,6 +26,37 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware(['auth']);
+    }
+
+    public function prospectosUsuario()
+    {
+        $mes = date('m');
+        $prospectadores = User::where('rol_id', 2)->get();
+        $ajaxProspectosUser = [];
+
+
+        foreach($prospectadores as $prospectador)
+        {
+            $prospectos = Prospecto::whereMonth('created_at', $mes)->where('user_id', $prospectador->id)->count();
+            $ajaxProspectosUser[] =$prospectos;
+        }
+
+        return $ajaxProspectosUser;
+
+    }
+
+    // prospectadores labels grafica pastel
+    public function contar()
+    {
+        $prospectadores = User::where('rol_id', 2)->get('name');
+        $arregloProspectadores = [];
+
+        foreach($prospectadores as $prospectador)
+        {
+            $arregloProspectadores[] = $prospectador->name;
+        }
+
+        return $arregloProspectadores;
     }
 
 

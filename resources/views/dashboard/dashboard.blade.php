@@ -78,3 +78,14 @@
     </div>
 </section>
 
+<section class="prospectos-usuarios mt-5 pt-3">
+
+        <div class="mt-5 card card-body border-0 shadow" style="border-radius: 2rem;">
+            <h2 class="font-weight-bold text-center">Prospectos del mes por Prospectador</h2>
+
+            <figure class="ml-5 ml-md-0">
+                <div id="mesProspectadores"></div>
+            </figure>
+        </div>
+</section>
+
