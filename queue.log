@@ -1,0 +1,113 @@
+
+   ErrorException 
+
+  Trying to access array offset on value of type null
+
+  at C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+    152|     protected function resolve($name)
+    153|     {
+    154|         $config = $this->getConfig($name);
+    155| 
+  > 156|         return $this->getConnector($config['driver'])
+    157|                         ->connect($config)
+    158|                         ->setConnectionName($name);
+    159|     }
+    160|
+
+  1   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError()
+
+  2   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:138
+      Illuminate\Queue\QueueManager::resolve()
+
+   ErrorException 
+
+  Trying to access array offset on value of type null
+
+  at C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+    152|     protected function resolve($name)
+    153|     {
+    154|         $config = $this->getConfig($name);
+    155| 
+  > 156|         return $this->getConnector($config['driver'])
+    157|                         ->connect($config)
+    158|                         ->setConnectionName($name);
+    159|     }
+    160|
+
+  1   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError()
+
+  2   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:138
+      Illuminate\Queue\QueueManager::resolve()
+
+   ErrorException 
+
+  Trying to access array offset on value of type null
+
+  at C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+    152|     protected function resolve($name)
+    153|     {
+    154|         $config = $this->getConfig($name);
+    155| 
+  > 156|         return $this->getConnector($config['driver'])
+    157|                         ->connect($config)
+    158|                         ->setConnectionName($name);
+    159|     }
+    160|
+
+  1   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError()
+
+  2   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:138
+      Illuminate\Queue\QueueManager::resolve()
+
+   ErrorException 
+
+  Trying to access array offset on value of type null
+
+  at C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+    152|     protected function resolve($name)
+    153|     {
+    154|         $config = $this->getConfig($name);
+    155| 
+  > 156|         return $this->getConnector($config['driver'])
+    157|                         ->connect($config)
+    158|                         ->setConnectionName($name);
+    159|     }
+    160|
+
+  1   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError()
+
+  2   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:138
+      Illuminate\Queue\QueueManager::resolve()
+
+   ErrorException 
+
+  Trying to access array offset on value of type null
+
+  at C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+    152|     protected function resolve($name)
+    153|     {
+    154|         $config = $this->getConfig($name);
+    155| 
+  > 156|         return $this->getConnector($config['driver'])
+    157|                         ->connect($config)
+    158|                         ->setConnectionName($name);
+    159|     }
+    160|
+
+  1   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:156
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError()
+
+  2   C:\Users\TECH-LOG\Desktop\SalesPro\vendor\laravel\framework\src\Illuminate\Queue\QueueManager.php:138
+      Illuminate\Queue\QueueManager::resolve()
+[2023-04-21 15:44:56][1] Processing: App\Notifications\ProspectoNotificacion
+[2023-04-21 15:45:06][1] Processed:  App\Notifications\ProspectoNotificacion
+[2023-04-21 15:52:29][3] Processing: App\Notifications\ProspectoNotificacion
+[2023-04-21 15:52:35][3] Processed:  App\Notifications\ProspectoNotificacion
+[2023-04-21 15:57:12][5] Processing: App\Notifications\ProspectoNotificacion
+[2023-04-21 15:57:18][5] Processed:  App\Notifications\ProspectoNotificacion
+[2023-04-24 11:14:16][1] Processing: App\Notifications\ProspectoNotificacion
+[2023-04-24 11:14:22][1] Processed:  App\Notifications\ProspectoNotificacion

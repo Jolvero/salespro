@@ -1,0 +1,313 @@
+:root {
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: #edededf6;
+    --hovercolor: rgb(23, 23, 23);
+    --width-collapsed: 50px;
+}
+
+nav {
+    z-index: 200 !important;
+}
+
+span {
+    color: #000000;
+}
+
+.item {
+    font-weight: bold;
+}
+.navbar {
+    position: fixed;
+    z-index: 1030;
+    width: 100%;
+}
+
+@media(max-width:250px) {
+    .navbar {
+        padding: 0;
+    }
+}
+
+@media(min-width:251px) {
+    .navbar {
+        padding: 2rem;
+    }
+}
+
+
+
+// @media(max-width:250px) {
+//     #sidemenu {
+//         margin-top: 5.3rem;
+//     }
+// }
+
+.body-expanded {
+    margin-left: var(--width);
+}
+
+#main-container {
+    color: white;
+}
+
+#sidemenu {
+    background-color: var(--bgcolor);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all;
+    transition-duration: .5s;
+    z-index: 1000;
+}
+
+#sidemenu a {
+    color: white;
+    text-decoration: none;
+}
+
+@media(min-width:1000px) {
+    #sidemenu:hover {
+        width: var(--width);
+        transition: var(--width-collapsed);
+        transition-duration: .5s;
+        transition-delay: .1s;
+        margin-top: 0;
+    }
+
+}
+
+.item-separator:hover {
+    background-color: #cfcfcf;
+
+}
+
+.link:hover {
+    background-color: #cfcfcf;
+
+}
+.link-importaciones {
+    padding: .6em 0;
+}
+.item-parent:hover {
+    background-color: #cfcfcf;
+
+}
+
+// #sidemenu:hover {
+//     width: var(--width);
+//     transition: var(--width-collapsed);
+//     transition-duration: .1s;
+//     transition-delay: .1s;
+// }
+.item-img {
+    width: 35px;
+    height: 35px;
+}
+
+#sidemenu.item-text a {
+    color: #ffffff;
+}
+
+
+/*
+Header
+*/
+#sidemenu #header {
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header #title {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#sidemenu #header #title,
+#sidemenu #header #menu-btn {
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn {
+    display: inline-block;
+}
+
+#sidemenu #header #menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover {
+    background-color: #ffffff;
+}
+
+#sidemenu #header #menu-btn .btn-hamburguer {
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+/*
+Profile
+*/
+#sidemenu #profile {
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+}
+
+#sidemenu #profile #photo {
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+
+#sidemenu #profile #photo img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+#sidemenu #profile #photo,
+#sidemenu #profile #name {
+    font-size: 24px;
+    padding: var(--padding);
+    overflow: hidden;
+}
+
+/*
+Item
+*/
+#sidemenu #menu-items {
+    overflow: hidden;
+}
+
+#sidemenu #menu-items .item {
+    width: var(--width);
+}
+
+#sidemenu #menu-items .ite .icon {
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item .title {
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item a {
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover {
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon {
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--width-collapsed);
+}
+
+#sidemenu #menu-items .item .icon img {
+    width: 100%;
+}
+
+#sidemenu #menu-items .item .title {
+    padding: var(--padding);
+}
+
+#sidemenu #menu-items .item.separator {
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+
+.menu-expanded {
+    width: var(--width);
+    transition: var(--width-collapsed);
+    transition-duration: .2s;
+    transition-delay: .2s;
+
+}
+
+.menu-expanded #header #title {
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span {
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.menu-expanded #profile #photo {
+    width: 200px;
+}
+
+.menu-expanded #profile #name {
+    width: 100%;
+}
+
+.menu-collapsed {
+    width: 50px;
+    transition: var(--width-collapsed);
+    transition-duration: .5s;
+    transition-delay: .2s;
+}
+
+.menu-collapsed #header #title {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-collapsed #profile #name {
+    display: none;
+}
+
+.menu-collapsed .item {
+    width: 100px;
+}
+
+
+.panel {
+    font-weight: 700;
+}
+
+@media(max-width:650px) {
+    .panel {
+        margin-left: 3rem;
+    }
+}
+
+@media(max-width:250px) {
+    nav.navbar.navbar-expand-md.navbar-light.bg-primary.shadow-sm.nav-principal {
+        padding: 0;
+    }
+}
+
+@media(min-width:251px) {
+    nav.navbar.navbar-expand-md.navbar-light.bg-primary.shadow-sm.nav-principal {
+        padding: 1rem;
+    }
+}
+
+.dropdown-toggle[aria-expanded="false"]:after {
+    transform: rotate(-90deg);
+    }
+    /*for animation*/
+    .dropdown-toggle:after {
+    transition: 0.3s;
+    color: #000000;
+    }

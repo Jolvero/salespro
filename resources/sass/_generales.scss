@@ -1,0 +1,58 @@
+.agregar-prospecto,
+.correo-img,
+.agregar-recordatorio {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover,
+.btn:focus {
+    color: #fff;
+    outline: 0;
+
+}
+
+.btn-agregar {
+    border-color: #8e44ad;
+    border-radius: 0;
+    color: #8e44ad;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.btn-agregar::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: #8e44ad;
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+
+}
+
+.btn-agregar:hover {
+    color: #fff;
+}
+
+.btn-agregar:hover:after {
+    width: 110%;
+}
+
+.form-control {
+    background: #e9e9e9;
+}
+
+.acciones {
+    padding-right: 2.5rem !important;
+    width: 25%;
+}
