@@ -14,7 +14,7 @@
 
     <div class="col-md-6 mt-5 mt-md-0" data-aos="flip-left" data-aos-duration="1000">
         <div class="card card-body border-0 shadow" style="border-radius: 2rem;">
-            <p> <img src="{{'/images/cartera.png'}}" class="mr-2" alt=""> Prospectado por: <span class="font-weight-bold">{{Auth::user()->name}}</span></p>
+            <p> <img src="{{'/images/cartera.png'}}" class="mr-2" alt=""> Prospectado por: <span class="font-weight-bold">{{$cliente->usuario->name}}</span></p>
             <div class="info mt-3">
                 <p class="font-weight-bold"><img src="{{'/images/nombre.png'}}" class="mr-2" alt=""> Nombre: <span class="font-weight-normal">{{$cliente->nombre}}</span></p>
                 <p class="font-weight-bold mt-4"><img src="{{'/images/empresa.png'}}" class="mr-2" alt=""> Empresa: <span class="font-weight-normal">{{$cliente->empresa}}</span></p>
