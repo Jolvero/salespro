@@ -170,6 +170,8 @@ class ProspectoController extends Controller
         return back()->with('estado', 'Prospecto agregado');
     }
 
+
+
     /**
      * Display the specified resource.
      *

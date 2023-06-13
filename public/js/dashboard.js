@@ -46,6 +46,61 @@ $.get('/cliente/dashboard', function (data) {
     chart.render();
 })
 
+$.get('/prospectadores', function(data) {
+    let prospectadores = [];
+
+    for(let i = 0; i < data.length; ++i) {
+        prospectadores = [... prospectadores, data[i]]
+    }
+
+    // importaciones por cliente
+    $.get('/prospectos/usuarios', function(data) {
+        var options = {
+            plotOptions: {
+                pie: {
+                  customScale: 0.8
+                }
+              },
+            toolbar: {
+                show: true,
+                offsetX: 0,
+                offsetY: 0,
+                tools: {
+                    selection: true,
+                    zoom: true,
+                    zoomin: true,
+                    zoomout: true,
+                    pan: true,
+                }
+            },
+            colors:['#3A83C8', '#415fff', '#9C27B0', '#3acfe7', '#e15018', '#37d962', '#b5ff7c', '#ff3305'],
+            series: data,
+            chart: {
+            width: 450,
+            type: 'pie',
+          },
+          labels: prospectadores,
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: '100%',
+                height: 550
+              },
+              legend: {
+                position: 'bottom',
+
+              }
+            }
+          }]
+          };
+
+          var chart = new ApexCharts(document.querySelector("#mesProspectadores"), options);
+          chart.render();
+
+    })
+})
+
 
 
 
