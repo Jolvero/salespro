@@ -20,6 +20,7 @@
             <tr data-aos="fade-down" data-aos-duration="1000" class="text-center">
                 <th>#</th>
                 <th>Nombre</th>
+                <th>Empresa</th>
                 <th>Prospectador</th>
                 <th class="acciones">Acciones</th>
 
@@ -30,6 +31,7 @@
             <tr class="text-center" data-aos="fade-down" class="text-center" data-aos-duration="1000">
                 <td>{{$cliente->id}}</td>
                 <td>{{$cliente->nombre}}</td>
+                <td>{{$cliente->empresa}}</td>
                 <td>{{$cliente->usuario->name}}</td>
                 <td class="acciones">
                     <a href="{{route('cliente.show',['cliente' => $cliente->id])}}" class="btn btn-dark my-2 d-block"><img src="{{'/images/show.png'}}" class="d-block mx-auto" alt=""></a>
