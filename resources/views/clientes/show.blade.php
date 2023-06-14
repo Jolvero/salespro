@@ -18,6 +18,7 @@
             <div class="info mt-3">
                 <p class="font-weight-bold"><img src="{{'/images/nombre.png'}}" class="mr-2" alt=""> Nombre: <span class="font-weight-normal">{{$cliente->nombre}}</span></p>
                 <p class="font-weight-bold mt-4"><img src="{{'/images/empresa.png'}}" class="mr-2" alt=""> Empresa: <span class="font-weight-normal">{{$cliente->empresa}}</span></p>
+                <p class="font-weight-bold mt-4"><img src="{{'/images/correo.png'}}" class="mr-2" alt=""> Correo: <span class="font-weight-normal">{{$cliente->correo}}</span></p>
 
                 @if ($cliente->rfc)
                 <p class="font-weight-bold mt-4"><img src="{{'/images/seguimiento.png'}}" class="mr-2" alt=""> RFC: <span class="font-weight-normal">{{$cliente->rfc}}</span></p>
