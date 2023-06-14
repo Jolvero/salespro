@@ -26,11 +26,6 @@
         @php
             $dia = date('Y-m-d')
         @endphp
-        @foreach ($recordatorios as $recordatorio)
-        @if ($dia == $recordatorio)
-            <p>Hola</p>
-        @endif
-        @endforeach
 
         <div class="col-md-3 mr-5 mr-md-0">
             <div class="d-flex">
