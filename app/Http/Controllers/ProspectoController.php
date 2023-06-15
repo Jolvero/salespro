@@ -362,7 +362,7 @@ class ProspectoController extends Controller
 
         if($prospecto->estado_id == 1 || $prospecto->estado_id == 2)
         {
-            $userMaster = User::where('email', 'direccionoperaciones@mrollogistics.com.mx')->get();
+            $userMaster = User::where('email', 'Fiones@mrollogistics.com.mx')->get();
             Notification::send($userMaster, new ProspectoNotificacion($prospecto->id, $prospecto->nombre, $prospecto->empresa, $prospecto->correo, $prospecto->cotizacion_id, $prospecto->observaciones, 'Prospecto', $user_id, '/prospecto/'. $prospecto->id. '/show'));
         }
 
@@ -421,6 +421,9 @@ class ProspectoController extends Controller
 
     public function mailingStore(Request $request, Auth $user)
     {
+        $this->validate($request, [
+            'plantilla-seleccionada' => 'required|string|min:10|max:200'
+        ]);
         $mensaje = $request['plantilla-seleccionada'];
         $adjuntos = [];
         if($request->hasFile('info'))

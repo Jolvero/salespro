@@ -45,7 +45,11 @@
                 <div class="col-md-6 mt-5">
                     <div class="form-group">
                         <label class="font-weight-bold4" for="plantilla-seleccionada">Plantilla Seleccionada</label>
-                        <textarea style="height: 10rem;" class="mt-5 form-control" name="plantilla-seleccionada" id="plantilla-seleccionada"></textarea>
+                        <textarea style="height: 10rem;" class="mt-5 form-control @error('plantilla-seleccionada') is-invalid @enderror" name="plantilla-seleccionada" id="plantilla-seleccionada"></textarea>
+
+                        @error('plantilla-seleccionada')
+                            <span class="invalid-feedback" role="alert"><strong>{{$message}}</strong></span>
+                        @enderror
                     </div>
                 </div>
 
