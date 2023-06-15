@@ -39,6 +39,8 @@
     <link href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/rowreorder/1.3.2/css/rowReorder.dataTables.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.6.1/css/colReorder.dataTables.min.css">
+    <link rel="icon" type="image/png" href="{{'/images/icono.png'}}"/>
+
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
