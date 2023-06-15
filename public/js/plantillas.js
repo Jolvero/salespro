@@ -1,5 +1,17 @@
 
 $('#formulario').on('submit', function(){
+
+    const nombre = document.getElementById('nombre').value;
+
+    if (nombre == null || nombre == 0 || /^\+$/.test(nombre)) {
+        Swal.fire({
+            title: 'validación',
+            text: 'El campo nombre es requerido',
+            icon: 'error',
+        });
+        return false;
+
+    }
     const plantilla = document.getElementById('plantilla').value;
 
     if (plantilla == null || plantilla == 0 || /^\+$/.test(plantilla)) {
