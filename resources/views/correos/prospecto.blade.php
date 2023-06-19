@@ -8,6 +8,6 @@
 </head>
 <body>
     {{$mensajes}}
-    <img src="http://127.0.0.1:8000/images/logo.jpeg" alt="">
+    <img src="http://importaciones.mrollogistics.com/images/logo.jpeg" alt="">
 </body>
 </html>
