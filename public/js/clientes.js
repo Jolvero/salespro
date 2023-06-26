@@ -30,10 +30,9 @@ $('#formulario-clientes').on('submit', function() {
     const correo = document.getElementById('correo');
 
     // Define our regular expression.
-    var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
+    let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
     // validar email
-    if (validEmail.test(correo.value)) {
+    if (regex.test(correo.value)) {
         if(correo.value.includes('.com,mx')) {
             return;
         }
