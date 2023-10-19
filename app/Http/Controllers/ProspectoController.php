@@ -422,7 +422,7 @@ class ProspectoController extends Controller
     public function mailingStore(Request $request, Auth $user)
     {
         $this->validate($request, [
-            'plantilla-seleccionada' => 'required|string|min:10|max:200'
+            'plantilla-seleccionada' => 'required|string|min:10|max:500'
         ]);
         $mensaje = $request['plantilla-seleccionada'];
         $adjuntos = [];

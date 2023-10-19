@@ -58,7 +58,7 @@
             <div class="col-md-6 mt-5">
                 <div class="form-group">
                     <label for="correos"><img src="{{'/images/documento.png'}}" class=" mb-2 mr-2" alt="">Documento</label>
-                    <input type="file" name="info[]" id="info" accept="image/*" class="form-control" multiple>
+                    <input type="file" name="info[]" id="info" accept="image/*" class="form-control">
                 </div>
         </div>
     </form>

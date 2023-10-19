@@ -42,7 +42,7 @@ class PlantillaController extends Controller
         //
         $this->validate($request, [
             'nombre' => 'required|string',
-            'plantilla' => 'required|min:10|max:10000'
+            'plantilla' => 'required|min:10'
         ]);
 
         $idUsuario = Auth::id();
