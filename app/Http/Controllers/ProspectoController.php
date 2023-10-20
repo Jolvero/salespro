@@ -422,9 +422,11 @@ class ProspectoController extends Controller
     public function mailingStore(Request $request, Auth $user)
     {
         $this->validate($request, [
-            'plantilla-seleccionada' => 'required|string|min:10'
+            'plantilla-seleccionada' => 'required|string|min:10',
+            'asunto' => 'required|string|max:70'
         ]);
         $mensaje = $request['plantilla-seleccionada'];
+        $asunto = $request['asunto'];
         $adjuntos = [];
         if($request->hasFile('info'))
         {
@@ -457,7 +459,7 @@ class ProspectoController extends Controller
                 {
                     $correo = substr($correo, 0, -1);
                 }
-                Mail::to($correo)->bcc('sistemas@mrollogistics.com.mx')->send(new Mailing($mensaje, $adjuntos, $user));
+                Mail::to($correo)->bcc('sistemas@mrollogistics.com.mx')->send(new Mailing($mensaje, $adjuntos, $user, $asunto));
             }
         }
 

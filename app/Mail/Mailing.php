@@ -14,17 +14,20 @@ class Mailing extends Mailable implements ShouldQueue
     public $mensajes;
     public $adjuntos;
     public $firmas;
+    public $asuntos;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($mensaje, $adjunto, Auth $firma)
+    public function __construct($mensaje, $adjunto, Auth $firma, $asunto)
     {
         //
         $this->mensajes = $mensaje;
         $this->adjuntos = $adjunto;
         $this->firmas = $firma::user()->email;
+        $this->asuntos = $asunto;
+
     }
 
     /**
@@ -34,7 +37,7 @@ class Mailing extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('correos.show-mailing')->subject('mensaje')->from($this->firmas);
+        return $this->view('correos.show-mailing')->subject($this->asuntos)->from($this->firmas);
 
     }
 }

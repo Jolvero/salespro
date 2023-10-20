@@ -23,6 +23,11 @@
                 <option value="prospectos">Prospectos</option>
             </select>
         </div>
+
+        <div class="col-md-3">
+            <label for="tipo"><img src="{{'/images/comentario.png'}}" class=" mb-2 mr-2" alt=""> Asunto</label>
+            <input type="text" name="asunto" id="asunto" class="form-control">
+        </div>
         <div class="col-md-6" id="tabla-contenido">
 
         </div>
@@ -37,7 +42,6 @@
                                 {{ $plantilla->nombre }}</option>
                         @endforeach
                     </select>
-
                 </div>
             </div>
 
