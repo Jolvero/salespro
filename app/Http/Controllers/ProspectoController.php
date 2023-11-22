@@ -459,7 +459,7 @@ class ProspectoController extends Controller
                 {
                     $correo = substr($correo, 0, -1);
                 }
-                Mail::to($correo)->bcc('sistemas@mrollogistics.com.mx')->send(new Mailing($mensaje, $adjuntos, $user, $asunto));
+                Mail::to($correo)->bcc('sistemas@mrollogistics.com.mx')->bcc('direccionoperaciones@mrollogistics.com.mx')->send(new Mailing($mensaje, $adjuntos, $user, $asunto));
             }
         }
 
